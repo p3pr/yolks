@@ -1,7 +1,9 @@
 # ----------------------------------
 # Environment: MongoDB
 # ----------------------------------
-FROM        --platform=$TARGETOS/$TARGETARCH mongo:7-focal
+FROM        --platform=$TARGETOS/$TARGETARCH mongo:7
+
+LABEL org.opencontainers.image.source=https://github.com/p3pr/yolks
 
 ENV         DEBIAN_FRONTEND noninteractive
 
@@ -13,5 +15,5 @@ USER        container
 ENV         USER=container HOME=/home/container
 WORKDIR     /home/container
 
-COPY        ./entrypoint.sh /entrypoint.sh
+COPY        ../entrypoint.sh ./entrypoint.sh
 CMD ["/bin/bash", "/entrypoint.sh"]
