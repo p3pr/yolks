@@ -1,4 +1,5 @@
 FROM ubuntu:latest
+LABEL org.opencontainers.image.source https://github.com/p3pr/yolks
 WORKDIR /home/container
 RUN apt-get update && apt-get install -y \
     curl unzip \
