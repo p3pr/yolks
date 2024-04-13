@@ -13,7 +13,7 @@
         "ghcr.io\/p3pr\/bun:1.1": "ghcr.io\/p3pr\/bun:1.1"
     },
     "file_denylist": [],
-    "startup": "bun install && bun run .",
+    "startup": "bun upgrade && bun install && bun run .",
     "config": {
         "files": "{}",
         "startup": "{\r\n    \"done\": \"child process started successfully\"\r\n}",
